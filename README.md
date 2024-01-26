@@ -42,7 +42,7 @@ To provide accurate data and make the visualizations meaningful, a few Measures 
 * _Streaming Movies in %_ = DIVIDE(CALCULATE(COUNT('01 Churn-Dataset'[StreamingMovies]), '01 Churn-Dataset'[StreamingMovies]="Yes", '01 Churn-Dataset'[Churn]="Yes"),CALCULATE(COUNT('01 Churn-Dataset'[StreamingMovies]),'01 Churn-Dataset'[Churn]="Yes"),0)
 * _Streaming TV in %_ = DIVIDE(CALCULATE(COUNT('01 Churn-Dataset'[StreamingTV]), '01 Churn-Dataset'[StreamingTV]="Yes", '01 Churn-Dataset'[Churn] ="Yes"),CALCULATE(COUNT('01 Churn-Dataset'[StreamingTV]),'01 Churn-Dataset'[Churn]="Yes"),0)
 * _Tech Support in %_ = DIVIDE(CALCULATE(COUNT('01 Churn-Dataset'[TechSupport]), '01 Churn-Dataset'[TechSupport]="Yes", '01 Churn-Dataset'[Churn]="Yes"),CALCULATE(COUNT('01 Churn-Dataset'[TechSupport]),'01 Churn-Dataset'[Churn]="Yes"),0)
-* **The table Lolalty** was also created for classification of tenure
+* **The table Lolalty** was also created for the classification of tenure
   * = Table.AddColumn(#"Changed Type", "Loyalty", each if [tenure] < 12 then "< 1 year" 
       else if [tenure] < 24 then "< 2 years" 
       else if [tenure] < 36 then "< 3 years" 
@@ -52,7 +52,7 @@ To provide accurate data and make the visualizations meaningful, a few Measures 
 
 ## The Dashboard
 
-The finished dashboard has two pages: "Churn"  and "Customer Risk Analysis". The first page provides an overview of the customer profile of those who churned, including demographics, customer account information, and services they signed for. The second page provides an overview of all Customers, classifying churn rates by services, product and financial categories. 
+The finished dashboard has two pages: "Churn"  and "Customer Risk Analysis". The first page provides an overview of the customer profile of those who churned, including demographics, customer account information, and services they signed for. The second page provides an overview of all Customers, classifying churn rates by services, products and financial categories. 
 
 You can find the dash in the link below:
  * [Customer Retention Dashboardn](https://app.powerbi.com/view?r=eyJrIjoiZjI4MDE5MmMtNjdlMS00ZDUyLTlmMDItMDJjNGViMGYyNDNiIiwidCI6IjAyODQyZDljLWVhNTAtNGVkNy1iMWY1LWI2MDIwOGIwM2YzNyJ9)
